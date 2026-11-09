@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko" data-page="index">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>스노우 볼 – 나만의 작은 겨울 세상</title>
+  <meta name="description" content="유리볼 속에 눈이 끝없이 내리는 힐링 앱, 스노우 볼. 흔들어 눈보라를 일으키고, 나만의 스노우볼을 꾸미고, 타이머로 집중하고, 라이브 배경화면으로 매일 만나 보세요.">
+  <meta property="og:title" content="스노우 볼 – 나만의 작은 겨울 세상">
+  <meta property="og:description" content="흔들면 눈보라, 직접 꾸미는 스노우볼, 홈 화면에도 내리는 눈.">
+  <meta property="og:image" content="images/globe-winter.webp">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#1b1745">
+  <link rel="alternate" hreflang="en" href="index.html">
+  <link rel="alternate" hreflang="ko" href="index-ko.html">
+  <link rel="alternate" hreflang="x-default" href="index.html">
+  <link rel="icon" type="image/png" href="icons/favicon.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/lang.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index-ko.html"><img src="icons/app-icon.png" alt=""><span>스노우 볼</span></a>
+    <nav class="lang-switch" aria-label="언어">
+      <a href="index.html?lang=en" data-lang="en" hreflang="en">EN</a>
+      <a href="index-ko.html" data-lang="ko" aria-current="page">한국어</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <canvas id="snow" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <div class="hero-text">
+        <span class="eyebrow">❄ 잠깐 쉬어 가는 작은 힐링 앱</span>
+        <h1>손안에 담은<br><span class="glow">작은 겨울 세상</span></h1>
+        <p class="lead">유리볼 속에 눈이 끝없이 내려요. 흔들면 눈보라가 일고, 내 마음대로 작은 마을을 꾸밀 수 있어요. 잔잔한 음악과 함께 쉬거나 집중해 보세요.</p>
+        <div class="cta-row">
+          <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.phonensoft.snowglobe" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 2.2 13.3 12l-9.7 9.8c-.4-.2-.6-.6-.6-1.1V3.3c0-.5.2-.9.6-1.1z"/><path fill="#FBBC04" d="m16.6 15.3-3.3-3.3 3.3-3.3 3.8 2.2c1.1.6 1.1 1.6 0 2.2z"/><path fill="#4285F4" d="M3.6 2.2c.3-.2.8-.2 1.3.1l11.7 6.4-3.3 3.3z"/><path fill="#EA4335" d="m13.3 12 3.3 3.3-11.7 6.4c-.5.3-1 .3-1.3.1z"/></svg>
+            <span><small>다운로드하기</small><strong>Google Play</strong></span>
+          </a>
+          <a class="btn-ghost" href="#themes">테마 구경하기</a>
+        </div>
+        <p class="note">무료 · Android 8.0 이상 · 한국어·영어</p>
+      </div>
+      <div class="phone"><img src="images/screen-home-ko.webp" alt="겨울 마을 테마가 보이는 스노우 볼 홈 화면" width="540" height="1170"></div>
+    </div>
+  </section>
+
+  <section class="themes" id="themes">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>바로 감상하는 기본 테마 6종</h2>
+        <p>마음에 드는 테마를 고르고 눈이 내리는 걸 바라보세요. 동화책처럼 따뜻한 그림으로 그렸어요.</p>
+      </div>
+      <div class="theme-grid">
+        <figure class="theme"><img src="images/globe-winter.webp" alt="겨울 마을 스노우볼" loading="lazy" width="520" height="640"><figcaption><strong>겨울 마을</strong><span>노을 아래 작은 집들과 교회</span></figcaption></figure>
+        <figure class="theme"><img src="images/globe-silent.webp" alt="고요한 밤 스노우볼" loading="lazy" width="520" height="640"><figcaption><strong>고요한 밤</strong><span>별이 뜬 밤, 숲속 오두막</span></figcaption></figure>
+        <figure class="theme"><img src="images/globe-forest.webp" alt="눈 덮인 숲 스노우볼" loading="lazy" width="520" height="640"><figcaption><strong>눈 덮인 숲</strong><span>전나무 숲을 지나는 썰매</span></figcaption></figure>
+        <figure class="theme"><img src="images/globe-xmas.webp" alt="크리스마스 아침 스노우볼" loading="lazy" width="520" height="640"><figcaption><strong>크리스마스 아침</strong><span>빨간 집 앞의 선물과 눈사람</span></figcaption></figure>
+        <figure class="theme"><img src="images/globe-sled.webp" alt="썰매 언덕 스노우볼" loading="lazy" width="520" height="640"><figcaption><strong>썰매 언덕</strong><span>노을 진 언덕을 내려오는 아이</span></figcaption></figure>
+        <figure class="theme"><img src="images/globe-chapel.webp" alt="밤의 교회 스노우볼" loading="lazy" width="520" height="640"><figcaption><strong>밤의 교회</strong><span>전나무 사이 불 켜진 교회</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>스노우볼 하나에 담은 작은 즐거움</h2>
+        <p>켜 두고 바라만 봐도 좋고, 나만의 스노우볼로 꾸며도 좋아요.</p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v20M4.9 4.9l14.2 14.2M2 12h20M4.9 19.1 19.1 4.9"/></svg></div>
+          <h3>흔들면 눈보라</h3>
+          <p>폰을 흔들거나 볼을 터치하면 눈이 휘몰아쳐요. 오래 켜 두면 눈이 조금씩 쌓여요.</p>
+        </div>
+        <div class="feature">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div>
+          <h3>내 손으로 꾸미기</h3>
+          <p>하늘을 고르고 오두막·교회·전나무·눈사람·선물을 놓아 보세요. 끌어서 옮기고, 크기를 바꾸고, 뒤집을 수 있어요.</p>
+        </div>
+        <div class="feature">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg></div>
+          <h3>집중·휴식 타이머</h3>
+          <p>25분 집중, 5분 휴식, 그리고 소리가 서서히 줄어드는 30분 수면 타이머까지.</p>
+        </div>
+        <div class="feature">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 6h4"/><circle cx="12" cy="13" r="3"/></svg></div>
+          <h3>라이브 배경화면</h3>
+          <p>홈 화면과 잠금 화면에도 스노우볼을. 폰을 기울이면 눈도 함께 흘러내려요.</p>
+        </div>
+        <div class="feature">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m10 9 5 3-5 3z"/></svg></div>
+          <h3>사진·영상 저장과 공유</h3>
+          <p>지금 모습을 사진으로, 또는 음악이 담긴 5·10·15초 영상으로 저장해 친구에게 보내 보세요.</p>
+        </div>
+        <div class="feature">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+          <h3>포근한 배경음</h3>
+          <p>잔잔한 피아노, 오르골 캐럴, 타닥타닥 벽난로, 겨울바람 소리. 밤 모드는 저녁 7시가 지나면 볼을 은은하게 어둡게 해요.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="screens">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>앱 화면 미리 보기</h2>
+      </div>
+      <div class="screens-row">
+        <div class="screen">
+          <div class="phone"><img src="images/screen-home-ko.webp" alt="홈 화면" loading="lazy" width="540" height="1170"></div>
+          <h3>감상</h3>
+          <p>재생·일시정지, 눈 세기, 배경음을 버튼 하나로 바꿔요.</p>
+        </div>
+        <div class="screen">
+          <div class="phone"><img src="images/screen-decorate-ko.webp" alt="꾸미기 화면" loading="lazy" width="540" height="1170"></div>
+          <h3>꾸미기</h3>
+          <p>꾸미는 대로 자동 저장돼요. 기본 테마를 고치면 내 글로브로 새로 저장돼요.</p>
+        </div>
+        <div class="screen">
+          <div class="phone"><img src="images/screen-timer-ko.webp" alt="타이머 화면" loading="lazy" width="540" height="1170"></div>
+          <h3>집중</h3>
+          <p>앱을 나가도 타이머는 계속 돌고, 끝나면 알려 드려요.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="download" id="download">
+    <div class="wrap">
+      <img class="icon" src="icons/app-icon.png" alt="스노우 볼 앱 아이콘" width="96" height="96">
+      <h2>언제든, 눈이 내리는 곳</h2>
+      <p>스노우 볼을 무료로 받고 나만의 겨울 세상을 만들어 보세요.</p>
+      <div class="cta-row">
+        <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.phonensoft.snowglobe" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 2.2 13.3 12l-9.7 9.8c-.4-.2-.6-.6-.6-1.1V3.3c0-.5.2-.9.6-1.1z"/><path fill="#FBBC04" d="m16.6 15.3-3.3-3.3 3.3-3.3 3.8 2.2c1.1.6 1.1 1.6 0 2.2z"/><path fill="#4285F4" d="M3.6 2.2c.3-.2.8-.2 1.3.1l11.7 6.4-3.3 3.3z"/><path fill="#EA4335" d="m13.3 12 3.3 3.3-11.7 6.4c-.5.3-1 .3-1.3.1z"/></svg>
+          <span><small>다운로드하기</small><strong>Google Play</strong></span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 J.Biglion · 스노우 볼</span>
+    <span>문의: <a href="mailto:jbiglion22@gmail.com">jbiglion22@gmail.com</a></span>
+  </div>
+</footer>
+
+<script src="js/snow.js"></script>
+</body>
+</html>
